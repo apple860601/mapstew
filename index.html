@@ -43,6 +43,8 @@
         zoom: 12,
         hash: true
     });
+    map1.showTileBoundaries=true;
+    map2.showTileBoundaries=true;
 
     syncMaps(map1, map2)
     map1.addControl(new MapboxInspect({ showInspectMap: true }));
