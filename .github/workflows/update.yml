@@ -63,7 +63,7 @@ jobs:
           filename: note
       
       - name: Upload updated PBF file as artifact for next job
-        uses: actions/upload-artifact@v2-preview
+        uses: actions/upload-artifact@v2
         with:
           name: ${{ env.LATEST_PBF }}
           path: ${{ github.workspace }}/${{ env.LATEST_PBF }}
@@ -78,7 +78,7 @@ jobs:
           ref: gh-pages
 
       - run: mkdir -p data/
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v2
         with:
           name: ${{ env.LATEST_PBF }}
           path: data/

@@ -16,9 +16,9 @@ jobs:
 
       - name: Merge master
         env:
-          GIT_AUTHOR_NAME: 'Hsieh Chin Fan'
-          GIT_COMMITTER_NAME: 'Hsieh Chin Fan'
-          EMAIL: 'typebrook@gmail.com'
+          GIT_AUTHOR_NAME: 'auto commit'
+          GIT_COMMITTER_NAME: 'auto commit'
+          EMAIL: 'noreply@localhost'
         run: >
           git fetch --depth=1 origin master:master
 
@@ -27,6 +27,6 @@ jobs:
           --strategy-option=theirs
           --no-edit 
 
-          git checkout HEAD^ -- tiles/ && git commit --amend --no-edit
+          git checkout -- tiles/ && git commit --amend --no-edit
 
           git push
